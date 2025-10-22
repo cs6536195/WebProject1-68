@@ -1,0 +1,60 @@
+:root {
+    --accent: #2563eb;
+    --bg: #f8fafc;
+    --card: #fff;
+}
+
+body {
+    font-family: system-ui;
+    margin: 0;
+    background: var(--bg);
+}
+
+.container {
+    padding: 16px;
+}
+
+.card {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    background: #e2e8f0;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media(min-width:768px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* base logo sizing (default for most pages) */
+.logo {
+    width: 150px;      /* change to desired default size */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* smaller logo only on shop page */
+.shop .logo {
+    width: 48px;     /* adjust as needed */
+    max-width: none;
+    height: auto;
+}
